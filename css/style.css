@@ -134,67 +134,513 @@ a {
   }
 }
 
-.site-footer {
-  background‑color: #111;
-  color: black;
-  font‑size: 0.9rem;
-  padding: 40px 20px;
+/* === O NÁS SEKCE === */
+.about-section {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
 }
-.site-footer a {
-  color: black;
-  text-decoration: none;
+
+.about-section h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
 }
-.site-footer a:hover {
-  text-decoration: underline;
+
+.about-intro {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: #555;
 }
-.footer‑top {
+
+/* TEAM GRID */
+.team-container {
   display: flex;
   flex-wrap: wrap;
-  justify‑space: between;
-  margin‑bottom: 30px;
+  justify-content: center;
+  gap: 30px;
 }
-.footer‑brand {
-  flex: 1 1 300px;
-  margin‑right: 50px;
+
+.team-member {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.footer‑brand h2 {
-  margin: 0 0 10px 0;
-  font‑size: 1.3rem;
+
+.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
-.footer‑brand address {
-  font‑style: normal;
-  line‑height: 1.5;
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
-.footer‑social {
-  flex: 1 1 200px;
+
+.team-member h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 5px;
 }
-.footer‑social h3 {
-  margin: 0 0 10px 0;
-  font‑size: 1.1rem;
+
+.team-member .position {
+  font-weight: 600;
+  color: orange;
+  margin-bottom: 8px;
 }
-.footer‑social ul {
-  list‑style: none;
-  padding: 0;
-  margin: 0;
+
+.team-member .bio {
+  font-size: 0.95rem;
+  color: #555;
 }
-.footer‑social ul li {
-  margin‑bottom: 8px;
-}
-.footer‑bottom {
-  border‑top: 1px solid #333;
-  padding‑top: 20px;
-  text‑align: center;
-}
-.footer‑bottom p {
-  margin: 0;
-}
-@media (max‑width: 600px) {
-  .footer‑top {
-    flex‑direction: column;
+
+/* === Animace === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
   }
-  .footer‑brand,
-  .footer‑social {
-    margin‑right: 0;
-    margin‑bottom: 20px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-member {
+    width: 85%;
+  }
+}
+
+/* === FOOTER === */
+.site-footer {
+  background: linear-gradient(180deg, #f9b233, #f6a500);
+  color: #fff;
+  padding-top: 40px;
+  font-family: 'Poppins', sans-serif;
+  border-top: 4px solid #fff3;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.footer-brand h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.footer-brand address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.footer-links,
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links h3,
+.footer-social h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+  padding-bottom: 5px;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-social li {
+  margin: 6px 0;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: #222;
+  background: #fff;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.footer-bottom {
+  text-align: center;
+  background: #222;
+  color: #eee;
+  padding: 12px 0;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+/* Animace při hoveru */
+.footer-social a {
+  display: inline-block;
+  transform: scale(1);
+}
+.footer-social a:hover {
+  transform: scale(1.1);
+}
+
+/* === Responzivita === */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-brand,
+  .footer-links,
+  .footer-social {
+    margin-bottom: 25px;
+  }
+
+  .footer-logo {
+    margin: 0 auto 10px;
+  }
+}
+
+/* === INDEX / HOME === */
+.home {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* === GRID SHAKŮ === */
+.shakes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.shake-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.shake-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.shake-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.shake-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.shake-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 1.6rem;
+  }
+  .shake-card img {
+    height: 180px;
+  }
+}
+
+/* === BMI kalkulačka === */
+.bmi-section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.bmi-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.bmi-card h1 {
+  margin: 0 0 6px;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.bmi-card .lead {
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.bmi-form .row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.bmi-form .row.inline {
+  display: inline-flex;
+  gap: 12px;
+}
+
+.bmi-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.bmi-form input[type="number"] {
+  padding: 10px 12px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fff;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 9px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn.primary {
+  background: orange;
+  color: #fff;
+  border-color: transparent;
+}
+.btn:hover { transform: translateY(-2px); transition: .15s; }
+
+/* Výsledek */
+.bmi-result {
+  margin-top: 18px;
+  background: linear-gradient(180deg, #fff, #fff7ef);
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid #fde2c7;
+}
+.bmi-result h2 {
+  margin: 0 0 8px;
+}
+.bmi-value, .bmi-category, .bmi-range {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+.bmi-advice {
+  margin-top: 10px;
+  color: #444;
+  font-weight: 600;
+}
+
+/* info box */
+.bmi-info {
+  margin-top: 18px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* skrytí */
+.hidden { display: none; }
+
+/* responsivita */
+@media (max-width: 700px) {
+  .bmi-card { padding: 18px; }
+  .bmi-form .row.inline { flex-direction: column; }
+  .actions { flex-direction: column; }
+}
+
+/* --- Uživatelská ikona --- */
+.user-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.user-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.user-icon:hover img {
+  filter: none;
+  transform: scale(1.1);
+}
+
+/* --- Přihlašovací popup --- */
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: fadeIn 0.4s ease;
+  position: relative;
+}
+
+.popup-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.login-form button {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #ffb84d;
+}
+
+.register-text {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 22px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-popup:hover {
+  color: black;
+}
+
+/* Efekt při načtení */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responzivita */
+@media (max-width: 480px) {
+  .popup-content {
+    width: 85%;
   }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css? <?php echo time(); ?>" type="text/css">
     <title> Šejkspír, s. r. o. </title>
 </head>
 <body>
@@ -39,6 +39,46 @@
   </nav>
 
   <!-- Přihlášení -->
-<button class="login-btn" id="loginBtn">Přihlásit se</button>
+<div class="user-icon" id="userIcon">
+  <img src="obrazky/panacek.png" alt="Přihlášení" />
+</div>
+
+<div class="login-popup" id="loginPopup">
+  <div class="popup-content">
+    <span class="close-popup" id="closePopup">&times;</span>
+    <h2>Přihlášení</h2>
+    <form class="login-form">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Zadej e-mail" required>
+
+      <label for="password">Heslo</label>
+      <input type="password" id="password" name="password" placeholder="Zadej heslo" required>
+
+      <button type="submit">Přihlásit se</button>
+      <p class="register-text">Nemáš účet? <a href="#">Zaregistruj se</a></p>
+    </form>
+  </div>
+</div>
+
+<script>
+  const userIcon = document.getElementById('userIcon');
+  const loginPopup = document.getElementById('loginPopup');
+  const closePopup = document.getElementById('closePopup');
+
+  userIcon.addEventListener('click', () => {
+    loginPopup.style.display = 'flex';
+  });
+
+  closePopup.addEventListener('click', () => {
+    loginPopup.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === loginPopup) {
+      loginPopup.style.display = 'none';
+    }
+  });
+</script>
+
 
 </header>
