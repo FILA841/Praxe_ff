@@ -81,7 +81,6 @@
     const minW = round1(18.5 * hm * hm);
     const maxW = round1(24.9 * hm * hm);
 
-    // Kategorie
     const cat = getCategory(bmi);
 
     // Zobrazit výsledky

@@ -36,6 +36,15 @@
     <a href="shaky.php">Shaky</a>
     <a href="bmi.php">Bmi kalkulačka</a>
     <a href="kontakt.php">Kontakt</a>
+
+    <!-- Language switcher -->
+<div class="lang-switcher">
+  <select id="langSelect" aria-label="Vyberte jazyk">
+    <option value="cs" selected>Česky</option>
+    <option value="en">English</option>
+  </select>
+  
+</div>
   </nav>
 
   <!-- Přihlášení -->

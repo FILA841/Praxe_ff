@@ -1,12 +1,27 @@
-<?php include "includes/menu.php"; ?>
+<?php
+include "includes/menu.php"
+?>
 
-<main class="home">
-  <section class="intro">
-    <h1>Výběr shaků</h1>
-    <p>Objev naši nabídku těch nejlepších milkshaků – od klasiky až po experimentální příchutě!</p>
-  </section>
+<!-- Hero sekce -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Shake, který vás nakopne!</h1>
+    <p>Objevte svět poctivých milkshaků – od klasických po ty nejodvážnější příchutě. Vyrobeno s láskou v Šejkspíru.</p>
+    <a href="shaky.php" class="btn-primary">Zobrazit produkty</a>
+  </div>
+</section>
 
-  <section class="shakes-grid">
+<!-- Sekce o značce -->
+<section class="about">
+  <h2>Proč právě Šejkspír?</h2>
+  <p>
+    Každý náš shake je pečlivě namíchaný z kvalitních ingrediencí, bez umělých přísad a s pořádnou dávkou kreativity.  
+    Ať už hledáte ranní energii nebo sladkou odměnu – u nás ji najdete.
+  </p>
+</section>
+
+<section class="shakes-grid">
     <div class="shake-card">
       <img src="obrazky/banan.png" alt="Banánový shake">
       <h3>Banánový shake</h3>
@@ -24,37 +39,8 @@
       <h3>Čokoládový shake</h3>
       <p>Pro milovníky kakaa a čokoládového nebe.</p>
     </div>
+</section>
 
-    <div class="shake-card">
-      <img src="obrazky/vanilka.webp" alt="Vanilkový shake">
-      <h3>Vanilkový shake</h3>
-      <p>Jemná chuť pravé vanilky – klasika, co nikdy nezklame.</p>
-    </div>
-
-    <div class="shake-card">
-      <img src="obrazky/coko-mata.webp" alt="Čokoládovo-mátový shake">
-      <h3>Čokoládovo-mátový shake</h3>
-      <p>Osvěžující kombinace čokolády a máty.</p>
-    </div>
-
-    <div class="shake-card">
-      <img src="obrazky/capucino.jpg" alt="Cappuccino shake">
-      <h3>Cappuccino shake</h3>
-      <p>Pro milovníky kávy s jemnou mléčnou pěnou.</p>
-    </div>
-  </section>
-</main>
-
-<script>
-  const ham = document.getElementById('hamburger');
-  const nav = document.getElementById('nav');
-  if (ham && nav) {
-    ham.addEventListener('click', () => {
-      const shown = nav.style.display === 'flex';
-      nav.style.display = shown ? 'none' : 'flex';
-      ham.setAttribute('aria-expanded', String(!shown));
-    });
-  }
-</script>
-
-<?php include "includes/footer.php"; ?>
+<?php
+include "includes/footer.php"
+?>
