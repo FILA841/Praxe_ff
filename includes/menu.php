@@ -52,6 +52,17 @@
   <img src="obrazky/panacek.png" alt="Přihlášení" />
 </div>
 
+<!-- Košík -->
+    <a href="kosik.php" class="cart-icon">
+      🛒 <span id="cart-count">
+        <?php 
+          if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+          echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; 
+        ?>
+
 <div class="login-popup" id="loginPopup">
   <div class="popup-content">
     <span class="close-popup" id="closePopup">&times;</span>

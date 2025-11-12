@@ -23,19 +23,19 @@ include "includes/menu.php"
 
 <section class="shakes-grid">
     <div class="shake-card">
-      <img src="obrazky/banan.png" alt="Banánový shake">
+      <img src="shaky/banan.png" alt="Banánový shake">
       <h3>Banánový shake</h3>
       <p>Sladký, krémový a plný energie. Ideální start dne!</p>
     </div>
 
     <div class="shake-card">
-      <img src="obrazky/jahoda.png" alt="Jahodový shake">
+      <img src="shaky/jahoda.png" alt="Jahodový shake">
       <h3>Jahodový shake</h3>
       <p>Klasika s čerstvými jahodami a smetanovým základem.</p>
     </div>
 
     <div class="shake-card">
-      <img src="obrazky/cokolada.png" alt="Čokoládový shake">
+      <img src="shaky/cokolada.png" alt="Čokoládový shake">
       <h3>Čokoládový shake</h3>
       <p>Pro milovníky kakaa a čokoládového nebe.</p>
     </div>
