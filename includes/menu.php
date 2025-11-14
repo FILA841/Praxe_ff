@@ -54,7 +54,7 @@
 
 <!-- Košík -->
     <a href="kosik.php" class="cart-icon">
-      🛒 <span id="cart-count">
+      🛒 <span id="cart-count"> </a>
         <?php 
           if (session_status() === PHP_SESSION_NONE) {
     session_start();
